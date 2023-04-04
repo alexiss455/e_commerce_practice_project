@@ -3,12 +3,13 @@ import Cardimg from "../assets/cardimg";
 import Handlecart from "../assets/handlecart";
 import AddtocartBTN from "../assets/addtocartBTN";
 
-export default function home() {
+export default function home({}) {
 
-  const [cout, setCount] = useState(0);
-  const [store, setStore] = useState([]);
 
   const pName = "Fall Limited Edition Sneakers";
+  const desc = `These low-profile sneakers are your perfect casual wear companion.
+  Featuring a durable rubber outer sole, they’ll withstand everything
+  the weather can offer.`;
   const price = 125;
 
   return (
@@ -20,11 +21,7 @@ export default function home() {
           SNEAKERS COMPANY
         </p>
         <h1 className="text-4xl font-bold mt-4">{pName}</h1>
-        <p className="text-sm text-gray-500 mt-8">
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they’ll withstand everything
-          the weather can offer.
-        </p>
+        <p className="text-sm text-gray-500 mt-8">{desc}</p>
         <div className="flex items-center gap-x-6 mt-4">
           <h1 className="text-2xl font-bold">${price}.00</h1>
           <h1 className="font-bold p-1 bg-orange-200 bg-opacity-40 text-orange-600 rounded-lg text-sm">
@@ -35,8 +32,7 @@ export default function home() {
           $250.00
         </p>
         <div className="flex items-center flex-row mt-8 gap-x-8 gap-y-4 max-md:flex-col">
-
-
+        
           <Handlecart
             handClick1={() => setCount((count) => count + 1)}
             handClick={() => setCount((count) => (count > 0 ? count - 1 : 0))}
@@ -51,7 +47,6 @@ export default function home() {
               }
             }}
           />
-
 
         </div>
       </div>

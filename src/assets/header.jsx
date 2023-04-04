@@ -2,7 +2,7 @@
 import Navitem from "./navitem";
 import Avatar from "./avatar";
 import Cart from "./cart";
-function header() {
+function header({props}) {
   return (
     <header className="flex items-center justify-between h-24 border-b relative">
       <div className=" flex items-center justify-center gap-x-10">
@@ -10,7 +10,7 @@ function header() {
         <Navitem />
       </div>
       <div className="flex flex-row items-center justify-center gap-x-10">
-        <Cart />
+        <Cart  count={props.cout}/>
         <Avatar />
       </div>
     </header>
