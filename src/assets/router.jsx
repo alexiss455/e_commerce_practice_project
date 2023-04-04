@@ -1,7 +1,20 @@
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/home";
-function router() {
+
+function withSharedProps(Component, sharedProps) {
+  return function (props) {
+    return <Component {...props} {...sharedProps} />;
+  };
+}
+function router(props) {
+  const sharedProps = {
+    count: props.count,
+    setCount: props.setCount,
+    store: props.store,
+    setStore: props.setStore,
+  };
+  const HomeWithSharedProps = withSharedProps(Home, sharedProps);
   return (
     <Routes>
       <Route path="/" element={<HomeWithSharedProps />} />
@@ -13,5 +26,4 @@ function router() {
     </Routes>
   );
 }
-
 export default router;
