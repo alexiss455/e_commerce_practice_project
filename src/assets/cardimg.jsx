@@ -129,7 +129,7 @@ function cardimg() {
       <div
         className={`${
           box === true ? "" : "hidden"
-        } z-40 absolute min-h-screen min-w-[100vw] flex top-0 left-0 after:w-[100vw] after:h-[100%] after:absolute after:bg-black after:opacity-70`}
+        } z-[100] absolute min-h-screen min-w-[100vw] flex top-0 left-0 after:w-[100vw] after:h-[100%] after:absolute after:bg-black after:opacity-70`}
       >
         <div
           ref={wrapperRef}
@@ -145,7 +145,7 @@ function cardimg() {
           <div className="relative flex items-center">
             <button
               onClick={prevLight}
-              className="flex items-center justify-center z-50 active:scale-90 absolute -left-[20px] shadow-xl bg-white text-black  rounded-full w-10 h-10 "
+              className="flex items-center justify-center z-[101] active:scale-90 absolute -left-[20px] shadow-xl bg-white text-black  rounded-full w-10 h-10 "
             >
               <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
                 <path
