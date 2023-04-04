@@ -6,7 +6,7 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className=" max-w-7xl mx-auto md:px-6">
+      <div className=" max-w-7xl mx-auto">
         <App />
       </div>
     </BrowserRouter>

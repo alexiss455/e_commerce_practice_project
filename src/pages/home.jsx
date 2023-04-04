@@ -11,9 +11,9 @@ export default function home({ count, setCount, setStore }) {
   const price = 125;
 
   return (
-    <div className="grid md:grid-cols-2 h-full gap-x-12 py-12">
+    <div className="grid md:grid-cols-2 h-full gap-x-12">
       <Cardimg />
-      <div className="max-w-[420px] md:mr-auto md:my-auto max-md:m-auto max-md:pt-12 max-md:px-6">
+      <div className="max-w-[420px] md:mr-auto md:my-auto max-md:m-auto max-md:pt-12 max-md:px-6 ">
         <div>
           <p className="text-orange-400 text-sm tracking-widest">
             SNEAKERS COMPANY
@@ -23,7 +23,7 @@ export default function home({ count, setCount, setStore }) {
           <div className="flex items-center gap-x-6 mt-4">
             <h1 className="text-2xl font-bold">${price}.00</h1>
             <h1 className="font-bold p-1 bg-orange-200 bg-opacity-40 text-orange-600 rounded-lg text-sm">
-              50%
+              50% 
             </h1>
           </div>
           <p className="text-sm text-gray-400 mt-[.25rem] line-through">

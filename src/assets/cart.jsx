@@ -25,7 +25,7 @@ function Cart({ className, count }) {
       <div
         className={`${
           cart === false ? "opacity-0 scale-75" : "scale-100 opacity-100"
-        } duration-200 rounded-lg shadow-xl w-full lg:w-64 top-[5rem] right-0 bg-white absolute z-50 `}
+        } duration-200 rounded-lg shadow-xl w-full lg:w-64 top-[5rem] right-0 bg-white absolute z-[30] `}
       >
         <h1 className="p-4 font-bold border-b border-gray-200">Cart</h1>
 
