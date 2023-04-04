@@ -3,8 +3,10 @@ import Cardimg from "../assets/cardimg";
 import Handlecart from "../assets/handlecart";
 import AddtocartBTN from "../assets/addtocartBTN";
 
-export default function home({}) {
+export default function home() {
 
+  const [cout, setCount] = useState(0);
+  const [store, setStore] = useState([]);
 
   const pName = "Fall Limited Edition Sneakers";
   const desc = `These low-profile sneakers are your perfect casual wear companion.
@@ -16,7 +18,6 @@ export default function home({}) {
     <div className="grid md:grid-cols-2 h-full gap-x-12 py-12">
       <Cardimg />
       <div className="max-w-[420px] md:mr-auto md:my-auto max-md:m-auto max-md:pt-12 max-md:px-6">
-        <p>{JSON.stringify(store)}</p>
         <p className="text-orange-400 text-sm tracking-widest">
           SNEAKERS COMPANY
         </p>
@@ -32,21 +33,21 @@ export default function home({}) {
           $250.00
         </p>
         <div className="flex items-center flex-row mt-8 gap-x-8 gap-y-4 max-md:flex-col">
-        
+
+
           <Handlecart
             handClick1={() => setCount((count) => count + 1)}
             handClick={() => setCount((count) => (count > 0 ? count - 1 : 0))}
-            count={cout}
+            count={count}
           />
 
           <AddtocartBTN
             val={() => {
-              if (cout > 0) {
-                const newItem = { name: pName, price: price, count: cout };
-                setStore([...store, newItem]);
-              }
+              setStore(count);
+              setCount(0);
             }}
           />
+
 
         </div>
       </div>

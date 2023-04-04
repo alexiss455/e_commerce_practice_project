@@ -8,6 +8,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <div className=" max-w-7xl mx-auto md:px-6">
         <App />
+        <Router />
       </div>
     </BrowserRouter>
   </React.StrictMode>
