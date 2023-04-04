@@ -3,9 +3,9 @@ import imges from "../model/model";
 import dete from "../../images/icon-delete.svg";
 import carts from "../../images/icon-cart.svg";
 
-function Cart({ className, items }) {
+function Cart({ className, items, count }) {
   const [cart, openCart] = useState(false);
- 
+
   // -----------------  click document close ---------------
   const wrapperRef = useRef(null);
   useEffect(() => {
@@ -21,7 +21,6 @@ function Cart({ className, items }) {
   }, []);
 
   const price = 125;
-  const count = 3
 
   return (
     <div onClick={() => openCart(preVlaue => !preVlaue)} className={`${className}`}>
