@@ -96,7 +96,6 @@ function cardimg() {
               fill-rule="evenodd"
             />
           </svg>
-          
         </button>
 
         <button onClick={handleClick}>

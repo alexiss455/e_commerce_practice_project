@@ -3,11 +3,15 @@ import imges from "../model/model";
 import dete from "../../images/icon-delete.svg";
 import carts from "../../images/icon-cart.svg";
 
-function Cart({ className, count }) {
+function Cart({ className, count , setCount }) {
   const [cart, openCart] = useState(false);
 
   const price = 125;
   const pName = "Fall Limited Edition Sneakers";
+  function Delete() {
+    setCount(0)
+  }
+
   return (
     <div className={`${className}`}>
       <div
@@ -44,7 +48,7 @@ function Cart({ className, count }) {
                       ${price * count}.00
                     </span>
                   </p>
-                  <span>
+                  <span onClick={ Delete }>
                     <img src={dete} className="active:scale-75" />
                   </span>
                 </div>

@@ -6,16 +6,15 @@ function App() {
   const [store, setStore] = useState(0);
   return (
     <>
-      <Header count={store} />
+      <Header count={store} setCount={setStore} />
       <div className="min-h-screen pt-44 max-md:pt-24 pb-10 ">
-      <Router
-        count={cout}
-        setCount={setCount}
-        store={store}
-        setStore={setStore}
-      />
+        <Router
+          count={cout}
+          setCount={setCount}
+          store={store}
+          setStore={setStore}
+        />
       </div>
- 
     </>
   );
 }
